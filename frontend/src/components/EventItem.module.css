@@ -1,0 +1,53 @@
+.event {
+  max-width: 30rem;       /* 容器寬度 */
+  margin: 2rem auto;
+  text-align: center;
+  overflow: hidden;       /* 控制圖片放大不超出 */
+  border-radius: 8px;     /* 圓角 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.event img {
+  width: 100%;
+  aspect-ratio: 1 / 1;    /* 保持正方形 */
+  object-fit: contain;     /* 保持原比例，不裁切 */
+  border-radius: 8px;
+  transition: transform 0.5s ease; /* 平滑放大 */
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.event img:hover {
+  transform: scale(1.1);   /* 放大 10% */
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.actions a {
+  color: white; 
+  text-decoration: none;
+  font: inherit;
+  padding: 0.25rem 1rem;
+}
+
+.actions a,
+.actions button {
+  padding: 0.25rem 1rem;
+  text-decoration: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.actions button {
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary-800);
+}
